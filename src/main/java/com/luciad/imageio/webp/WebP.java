@@ -100,6 +100,7 @@ class NativeLibraryUtils {
   public static void loadFromJar() {
     String os = System.getProperty("os.name").toLowerCase();
     String bits = System.getProperty("os.arch").contains("64") ? "64": "32";
+    String osArch = System.getProperty("os.arch");
 
     String libFilename = "libwebp-imageio.so";
     String platform = "linux";
@@ -110,6 +111,8 @@ class NativeLibraryUtils {
     } else if(os.contains("mac")) {
       platform = "mac";
       libFilename = "libwebp-imageio.dylib";
+    } else if ("linux".equals(platform) && osArch.contains("aarch64")) {
+      bits = "arm64";
     }
 
     // copy the native lib from the jar to a temp file on disk and load from there

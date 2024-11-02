@@ -5,12 +5,11 @@ This is a fork from [luciad/webp-imageio](https://bitbucket.org/luciad/webp-imag
 
 # Changes
 - Native libs are bundled in the jar
-- Published to Maven Central (`org.sejda.imageio`:`webp-imageio` artifact)
-- Android support unknown (have not tested)
+- Linux support ARM64
 
 # Supported platforms
 - windows (32, 64 bit)
-- linux (64 bit)
+- linux (64 bit, ARM64)
 - mac (64 bit)
 
 --------------
